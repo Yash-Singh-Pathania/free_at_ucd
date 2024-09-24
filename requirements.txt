@@ -1,0 +1,9 @@
+numpy
+streamlit
+folium
+streamlit-folium
+pandas
+geopy
+sqlalchemy
+streamlit-geolocation
+Pillow
