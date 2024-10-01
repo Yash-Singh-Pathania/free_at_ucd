@@ -24,7 +24,7 @@ m = folium.Map(location=[53.308, -6.224], zoom_start=15)
 
 Fullscreen().add_to(m)
 
-emoji = '📍'  # You can choose any emoji
+emoji = '⚫'  # You can choose any emoji
 
 locations = db_session.query(Location).all()
 
