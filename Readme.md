@@ -12,18 +12,25 @@ A community-powered app where University College Dublin (UCD) students can mark 
 ---
 
 ## Roadmap:
-### Phase 1: Initial Deployment
-- Deploy the app using Streamlit.
-- Live map functionality for tagging and viewing locations.
 
-### Phase 2: Data & Analytics
-- Add user analytics to track popular spots.
-- Integrate basic reporting to see peak hours and high-demand items.
+### 🔥 **Phase 1: Initial Deployment** (In Progress)
+- [x] Deploy the app using Streamlit.
+- [x] Live map functionality for tagging and viewing locations.
+- [ ]  Integrate redis to avoid multiple db calls
 
-### Phase 3: Scale & Optimize
-- Improve performance for larger data sets.
-- Expand functionality to allow filters (e.g., food, merch, drinks).
+---
 
+### ⏳ Phase 2: Data & Analytics (Upcoming)
+- [ ] Add user analytics to track popular spots.
+- [ ] Integrate basic reporting to see peak hours and high-demand items.
+
+---
+
+### 🚀 Phase 3: Scale & Optimize (Future)
+- [ ] Improve performance for larger data sets.
+- [ ] Expand functionality to allow filters (e.g., food, merch, drinks).
+
+---
 ---
 
 ## Run Locally:
