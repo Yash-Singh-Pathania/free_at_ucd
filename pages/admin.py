@@ -1,30 +1,26 @@
-# pages/1_🔑_Admin.py
 import streamlit as st
 import folium
 from streamlit_folium import st_folium
 from geopy.geocoders import Nominatim
 from datetime import datetime
 import base64
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from models import Location, Base
 from streamlit_geolocation import streamlit_geolocation
 import os
+from models import Location
 from PIL import Image
 import io
 
-engine = create_engine('sqlite:///data/locations.db', connect_args={"check_same_thread": False})
+# Import db session and engine from db.py
+from db import get_db_session
 
-Base.metadata.create_all(engine)
-
-Session = sessionmaker(bind=engine)
-db_session = Session()
+# Initialize database session
+db_session = get_db_session()
 
 st.title("🔑 Admin Interface")
 
-#TODO need to add this in env variables 
+# Load admin code from environment variables
 admin_code_input = st.text_input("Enter Admin Code", type="password")
-admin_code = os.getenv('ADMIN_CODE', 'admin123')  # Replace with environment variable for production
+admin_code = os.getenv('ADMIN_CODE')  # Replace with environment variable for production
 
 if admin_code_input == admin_code:
     st.success("Admin Mode Activated")
@@ -139,7 +135,7 @@ if admin_code_input == admin_code:
 else:
     st.error("🚫 Incorrect Admin Code")
 
-#this has to be worked on yash
+# Styling and hiding Streamlit default sidebar
 st.markdown("""
 <style>
 [data-testid="stSidebar"] {

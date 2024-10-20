@@ -7,3 +7,6 @@ geopy
 sqlalchemy
 streamlit-geolocation
 Pillow
+psycopg2-binary 
+python-dotenv
+numpy

@@ -1,30 +1,22 @@
-# app.py
 import streamlit as st
 import folium
 from folium.plugins import Fullscreen
 from streamlit_folium import st_folium
-from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from models import Location, Base
+from db import get_db_session
+from models import Location
 import base64
 
 st.set_page_config(layout="wide")
 
-# Database setup
-engine = create_engine('sqlite:///data/locations.db', connect_args={"check_same_thread": False})
-
-
-Base.metadata.create_all(engine)
-
-Session = sessionmaker(bind=engine)
-db_session = Session()
+db_session = get_db_session()
 
 st.title("🍽️ Free at UCD")
 m = folium.Map(location=[53.308, -6.224], zoom_start=15)
 
 Fullscreen().add_to(m)
 
-emoji = '⚫'  # You can choose any emoji
+emoji = '⚫' 
 
 locations = db_session.query(Location).all()
 
