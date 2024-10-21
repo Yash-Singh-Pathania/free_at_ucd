@@ -7,7 +7,12 @@ from db import get_db_session
 from models import Location
 import base64
 
-st.set_page_config(layout="wide")
+st.set_page_config(
+    page_title="Free at UCD",
+    page_icon="🍔",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
 db_session = get_db_session()
 
