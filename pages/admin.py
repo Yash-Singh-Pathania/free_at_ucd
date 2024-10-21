@@ -16,6 +16,13 @@ from db import get_db_session
 # Initialize database session
 db_session = get_db_session()
 
+st.set_page_config(
+    page_title="Free at UCD",
+    page_icon="🍔",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 st.title("🔑 Admin Interface")
 
 # Load admin code from environment variables
