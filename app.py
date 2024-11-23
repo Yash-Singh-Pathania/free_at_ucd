@@ -17,7 +17,8 @@ st.set_page_config(
 db_session = get_db_session()
 
 st.title("🍽️ Free at UCD")
-st.markdown("made by Yash ^.^ [🔗](https://www.linkedin.com/in/yashhere/)")
+url = "https://www.linkedin.com/in/yashhere/"
+st.write("made by Yash ^.^ [🔗](%s)" % url)
 
 @st.cache_resource
 def create_map():
