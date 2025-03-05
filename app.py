@@ -83,6 +83,12 @@ def create_map():
 m = create_map()
 st_data = st_folium(m, width=None, height=700, returned_objects=[])
 
+# About Us Section
+st.markdown("## About Us")
+st.write("""
+If it's listed here, there's free food on campus! I'm Yash, and together with a group of friends, we manage a WhatsApp community that crowdsources information about free food and displays it on this map. If it’s on the map, it’s happening on the ground. Our  goal is to connect students with free food across campus. We’re also working on an AI solution to eliminate the need for crowdsourcing—stay tuned, it’s coming soon!
+""")
+
 st.markdown("""
 <style>
 [data-testid="stSidebar"] {
